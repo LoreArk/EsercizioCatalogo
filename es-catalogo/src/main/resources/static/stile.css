@@ -1,0 +1,42 @@
+a {
+    
+    text-decoration: none;
+    font-size: 0.5em;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 1px 0 #cacaca, 0 2px 0 #dddcdc, 0 3px 0 #c1c1c1, 0 4px 0 #bdbdbd, 0 5px 0 #b0b0b0;
+
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: #a09369;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: #2c2c2c;
+    background-color: #fff;
+}
+#nomi {
+    text-decoration: none;
+    font-size: 0.5em;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 1px 0 #838383, 0 2px 0 #c3c3c3, 0 3px 0 #e7e7e7;
+}
+#nomi:hover {
+    text-decoration: underline;
+}
+#nomi:visited {
+    color: #a09369;
+}

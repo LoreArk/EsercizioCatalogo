@@ -11,6 +11,7 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" type="text/css" href="stile.css">
 </head>
 
 <body>
@@ -24,10 +25,11 @@
 
         <div class="row mt-4 justify-content-center mh-100">
             <div th:each="articolo : ${articoli}" class="col-lg-3 text-center p-2">
-                <img th:src="|${articolo.immagine}|" alt="Telefono" style="width: auto; height: 200px;">
-                <h4 class="text-primary mt-2"><a th:href="@{/dettaglio(id=${articolo.idArticolo})}" th:text="|${articolo.marchio} ${articolo.modello}|">Marca e modello</a></h4>
+                <a th:href="@{/dettaglio(id=${articolo.idArticolo})}"><img th:src="|${articolo.immagine}|" alt="Telefono" style="width: auto; height: 200px;"></a>
+                <h4 class="text-primary mt-2"><a id="nomi" th:href="@{/dettaglio(id=${articolo.idArticolo})}" th:text="|${articolo.marchio} ${articolo.modello}|">Marca e modello</a></h4>
             </div>
         </div>
+        
     </div>
 
 </body>

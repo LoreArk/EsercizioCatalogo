@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="stile.css">
 </head>
+
 <body>
     <div class="container">
         <div class="bg-dark color-white p-4 text-center rounded-bottom">
@@ -24,14 +27,28 @@
             </div>
             <div class="col-lg-4">
                 <ul class="list-group mt-4">
-                    <li class="list-group-item" th:text="|Marca e modello: ${articolo.marchio} ${articolo.modello}|"></li>
-                    <li class="list-group-item" th:text="|Prezzo: ${#numbers.formatDecimal(articolo.prezzo,0,'POINT',2,'COMMA')} Euro|"></li>
+                    <li class="list-group-item" th:text="|Marca e modello: ${articolo.marchio} ${articolo.modello}|">
+                    </li>
+                    <li class="list-group-item"
+                        th:text="|Prezzo: ${#numbers.formatDecimal(articolo.prezzo,0,'POINT',2,'COMMA')} Euro|"></li>
                     <li class="list-group-item" th:text="|Sistema operativo: ${articolo.sistemaOperativo}|"></li>
                     <li class="list-group-item" th:text="|Memoria: ${articolo.memoria}|"></li>
                 </ul>
                 <h4 class="mt-4 text-center"><a class="btn btn-outline-dark">Aggiungi al carrello</a></h4>
             </div>
+            <div class="d-flex justify-content-between mt-4">
+                <!-- Freccia indietro -->
+                <a href="/" class="btn btn-outline-primary">
+                  <i class="bi bi-arrow-left"></i> Articolo precedente
+                </a>
+            
+                <!-- Freccia avanti -->
+                <a href="/" class="btn btn-outline-primary">
+                  Articolo successivo <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
         </div>
     </div>
 </body>
+
 </html>
