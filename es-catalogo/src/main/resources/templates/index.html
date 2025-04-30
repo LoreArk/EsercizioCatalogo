@@ -22,9 +22,9 @@
             <a th:href="@{/admin}" class="fs-4 text-white me-4">Area Riservata Amministratore</a>
         </div>
 
-        <div class="row mt-4 justify-content-center">
+        <div class="row mt-4 justify-content-center mh-100">
             <div th:each="articolo : ${articoli}" class="col-lg-3 text-center p-2">
-                <img th:src="|${articolo.immagine}|" alt="Telefono">
+                <img th:src="|${articolo.immagine}|" alt="Telefono" style="width: auto; height: 200px;">
                 <h4 class="text-primary mt-2"><a th:href="@{/dettaglio(id=${articolo.idArticolo})}" th:text="|${articolo.marchio} ${articolo.modello}|">Marca e modello</a></h4>
             </div>
         </div>
