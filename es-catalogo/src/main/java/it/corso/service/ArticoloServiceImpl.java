@@ -16,7 +16,6 @@ public class ArticoloServiceImpl implements ArticoloService {
 
     @Override
     public List<Articolo> elencoArticoli(){
-        // chiamare il metodo findAll() su un'istanza di tipo LibroRepository (libroRepository.findAll())
         return (List<Articolo>) articoloRepository.findAll();
     }
 

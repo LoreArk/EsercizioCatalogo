@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dettaglio</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
 <body>
     <div class="container">
-        test dettaglio
+        <div class="bg-dark color-white p-4 text-center rounded-bottom">
+            <a th:href="@{/}" class="fs-4 text-white me-4">Home</a>
+            <a th:href="@{/registrazione}" class="fs-4 text-white me-4">Registrazione Cliente</a>
+            <a th:href="@{/logincliente}" class="fs-4 text-white me-4">Area Riservata Cliente</a>
+            <a th:href="@{/admin}" class="fs-4 text-white me-4">Area Riservata Amministratore</a>
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-lg-4">
+                <img th:src="@{Images/no_img.png}" alt="telefono" class="img-fluid">
+            </div>
+            <div class="col-lg-4">
+                <ul class="list-group mt-4">
+                    <li class="list-group-item" th:text="|Marca e modello: ${articolo.marchio} ${articolo.modello}|"></li>
+                    <li class="list-group-item" th:text="|Prezzo: ${#numbers.formatDecimal(articolo.prezzo,0,'POINT',2,'COMMA')} Euro|"></li>
+                    <li class="list-group-item" th:text="|Sistema operativo: ${articolo.sistemaOperativo}|"></li>
+                    <li class="list-group-item" th:text="|Memoria: ${articolo.memoria}|"></li>
+                </ul>
+                <h4 class="mt-4 text-center"><a class="btn btn-outline-dark">Aggiungi al carrello</a></h4>
+            </div>
+        </div>
     </div>
 </body>
 </html>
