@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 30, 2025 alle 13:04
+-- Creato il: Apr 30, 2025 alle 13:58
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -49,7 +49,7 @@ INSERT INTO `articolo` (`id_articolo`, `marchio`, `modello`, `sistema_operativo`
 (5, 'Huawei', 'P50 Pro', 'HarmonyOS', '256 GB', 799.99, '/images/P50Pro.jpg'),
 (6, 'Sony', 'Xperia 1 V', 'Android', '512 GB', 1199.99, '/images/Xperia1v.webp'),
 (7, 'OnePlus', '11', 'Android', '256 GB', 699.99, '/images/oneplus11.jpg'),
-(8, 'Oppo', 'Find X6', 'Android', '256 GB', 749.99, '/images/FindX7.jpg'),
+(8, 'Oppo', 'Find X6', 'Android', '256 GB', 749.99, '/images/FindX6.jpg'),
 (9, 'Motorola', 'Edge 40', 'Android', '128 GB', 549.99, '/images/Edge40.jpg'),
 (10, 'Nokia', 'G60', 'Android', '128 GB', 299.99, '/images/NokiaG60.jpeg');
 
