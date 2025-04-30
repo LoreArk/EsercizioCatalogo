@@ -24,7 +24,7 @@
 
         <div class="row mt-4 justify-content-center">
             <div th:each="articolo : ${articoli}" class="col-lg-3 text-center p-2">
-                <img th:src="@{Images/no_img.png}" alt="Telefono">
+                <img th:src="|${articolo.immagine}|" alt="Telefono">
                 <h4 class="text-primary mt-2"><a th:href="@{/dettaglio(id=${articolo.idArticolo})}" th:text="|${articolo.marchio} ${articolo.modello}|">Marca e modello</a></h4>
             </div>
         </div>
