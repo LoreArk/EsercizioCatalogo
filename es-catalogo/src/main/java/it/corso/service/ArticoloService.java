@@ -7,4 +7,5 @@ public interface ArticoloService {
 
     List<Articolo> elencoArticoli();
     Articolo datiArticolo(Integer idArticolo);
+
 }
