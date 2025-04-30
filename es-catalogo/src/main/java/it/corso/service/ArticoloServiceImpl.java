@@ -28,5 +28,13 @@ public class ArticoloServiceImpl implements ArticoloService {
     }
     return null;
     }
+
+    @Override
+    public int[] minmaxid() {
+        int min = articoloRepository.ritornoMinId();
+        int max = articoloRepository.ritornoMaxId();
+        
+        return new int[]{min,max};
+    }
     
 }

@@ -23,7 +23,7 @@
         </div>
         <div class="row mt-4 justify-content-center">
             <div class="col-lg-4">
-                <img th:src="${articolo.immagine}" alt="telefono" class="img-fluid">
+                <img th:src="${articolo.immagine}" alt="telefono" class="img-fluid" style="width: auto; height: 500px;">
             </div>
             <div class="col-lg-4">
                 <ul class="list-group mt-4">
@@ -38,12 +38,12 @@
             </div>
             <div class="d-flex justify-content-between mt-4">
                 <!-- Freccia indietro -->
-                <a href="/" class="btn btn-outline-primary">
+                <a th:style="${articolo.idArticolo > minmax[0] ? '':'visibility:hidden'}"th:href="@{/dettaglio(id=${articolo.idArticolo - 1})}" class="btn btn-outline-primary">
                   <i class="bi bi-arrow-left"></i> Articolo precedente
                 </a>
             
                 <!-- Freccia avanti -->
-                <a href="/" class="btn btn-outline-primary">
+                <a th:style="${articolo.idArticolo < minmax[1] ? '':'visibility:hidden' }" th:href="@{/dettaglio(id=${articolo.idArticolo + 1})}" class="btn btn-outline-primary">
                   Articolo successivo <i class="bi bi-arrow-right"></i>
                 </a>
               </div>

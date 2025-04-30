@@ -24,6 +24,7 @@ public class DettaglioController {
             return "redirect:/";
         }
         model.addAttribute("articolo", articolo);
+        model.addAttribute("minmax",articoloService.minmaxid());
         return "dettaglio";
     }
 }
