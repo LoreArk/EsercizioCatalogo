@@ -13,7 +13,7 @@ import it.corso.service.ArticoloService;
 
 @Controller
 @RequestMapping("/")
-public class indexController {
+public class IndexController {
 
     @Autowired
     private ArticoloService articoloService;
